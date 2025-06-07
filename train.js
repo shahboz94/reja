@@ -1,12 +1,13 @@
 console.log("Jack Ma maslahatlari");
-const list = [
-  "yaxshi talaba boling", // 0-20
-  "to'gri boshliq tanlang va koproq hato qiling", //20-30
-  "o'zingizga ishlashingizni boshlang", //30-40
-  "siz kuchli bolgan narsalarni qiling", //40-50
-  "yoshlarga investitsiya qiling", //50-60
-  "endi dam oling , foydasi yoq endi", //60
-];
+// const list = [
+//   "yaxshi talaba boling", // 0-20
+//   "to'gri boshliq tanlang va koproq hato qiling", //20-30
+//   "o'zingizga ishlashingizni boshlang", //30-40
+//   "siz kuchli bolgan narsalarni qiling", //40-50
+//   "yoshlarga investitsiya qiling", //50-60
+//   "endi dam oling , foydasi yoq endi", //60
+// ];
+
 /*  21 lesson: NodeJS event loop va Calback functionlar  */
 
 // function maslahatBering(a, callback) {
@@ -200,9 +201,35 @@ siz kuchli bolgan narsalarni qiling
 // console.log("passed here 1");
 
 /*  javob: endi dam oling , foydasi yoq endi  qayta qayta ishga tushyabdi*/
-function countLetter(alfabit, misra) {
-  const result = misra.split("");
-  const lastResult = result.filter((e) => e === alfabit);
-  console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
-}
-countLetter("e", "enginee");
+// function countLetter(alfabit, misra) {
+//   const result = misra.split("");
+//   const lastResult = result.filter((e) => e === alfabit);
+//   console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
+// }
+// countLetter("e", "enginee");
+
+// console.log("===== PRACTICE =====");
+
+// // DEFINE
+// function qoldiqliBolish(a, b, callback) {
+//   if (b === 0) {
+//     callback("Mahraj nolga teng emas", null);
+//   } else {
+//     callback(null, a % b);
+//   }
+// }
+
+// // CALL
+// qoldiqliBolish(10, 6, (err, data) => {
+//   if (err) console.log("Error:", err);
+//   else {
+//     console.log("data:", data);
+//   }
+// });
+
+// function countDigits("ad2a54y79wet0sfgb9") {
+//   const result = misra.split();
+//   const lastResult = result.filter((e) => e === alfabit);
+//   console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
+// }
+// countLetter("e", "enginee");

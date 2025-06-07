@@ -337,6 +337,7 @@
   border: 1px solid #ffb400;
   border-radius: 6px;
 }
+
 .midd_frame .right_page {
   position: relative;
   width: auto;
@@ -347,6 +348,14 @@
   position: absolute;
   width: 326px;
   height: 450px;
+}
+
+.home_frame .container .midd_frame .services_page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home_frame .container .midd_frame .services_page .content_page {
@@ -374,6 +383,7 @@
 .midd_frame .services_page .content_page span {
   width: 438px;
   height: auto;
+  text-align: center;
 
   font-family: Inter;
   font-weight: 400;
@@ -402,6 +412,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   text-transform: capitalize;
   background: #ffffff;
 }
@@ -440,6 +451,7 @@
 }
 
 .home_frame .container .right_frame {
+  position: relative;
   width: 108px;
   height: 1315px;
   display: flex;
@@ -464,11 +476,17 @@
   align-items: center;
 }
 
+.home_frame .right_frame .icon_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .home_frame .right_frame .icon_boxes a {
   width: 40px;
   height: 40px;
 }
 
-.home_frame .right_frame .icon_boxes img:hover {
+.home_frame .right_frame .icon_box img:hover {
   background-color: #ffb400;
 }
