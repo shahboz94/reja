@@ -201,6 +201,7 @@ siz kuchli bolgan narsalarni qiling
 // console.log("passed here 1");
 
 /*  javob: endi dam oling , foydasi yoq endi  qayta qayta ishga tushyabdi*/
+
 // function countLetter(alfabit, misra) {
 //   const result = misra.split("");
 //   const lastResult = result.filter((e) => e === alfabit);
@@ -233,3 +234,10 @@ siz kuchli bolgan narsalarni qiling
 //   console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
 // }
 // countLetter("e", "enginee");
+
+function countDigits("ad2a54y79wet0sfgb9") {
+  const result = misra.split();
+  const lastResult = result.filter((e) => e === alfabit);
+  console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
+}
+const countDigits("ad2a54y79wet0sfgb9");
