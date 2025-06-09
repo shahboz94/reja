@@ -1,7 +1,7 @@
 {
   "name": "reja",
   "version": "1.0.0",
-  "description": "\"bizning birinchi loyihamiz\" ",
+  "description": "Bu bizning birinchi loyihamiz",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,15 +9,14 @@
     "train": "nodemon train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "SHAWN",
+  "author": "shawn",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "mongodb": "^3.2.6",
-    "nodemon": "^3.1.10"
+    "express": "^4.17.3",
+    "mongodb": "^3.2.6"
   },
   "devDependencies": {
-    "@types/express": "^5.0.2"
+    "nodemon": "^3.1.10"
   }
 }

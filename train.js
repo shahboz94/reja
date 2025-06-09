@@ -1,4 +1,23 @@
-console.log("Jack Ma maslahatlari");
+/*       TASK A      */
+// function countDigits("ad2a54y79wet0sfgb9") {
+//   const result = misra.split();
+//   const lastResult = result.filter((e) => e === alfabit);
+//   console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
+// }
+// countLetter("e", "enginee");
+
+/*       TASK B      */
+function countDigits(text) {
+  const result = text.split("");
+  const lastResult = result.filter((ele) => {
+    return ele >= 0 && ele !== " ";
+  });
+  console.log(`${text} ning ichida raqamlar ${lastResult.length}ta bor`);
+}
+countDigits("ad2 a54f05y79w");
+// const { listen } = require("./app");
+
+// console.log("Jack Ma maslahatlari");
 // const list = [
 //   "yaxshi talaba boling", // 0-20
 //   "to'gri boshliq tanlang va koproq hato qiling", //20-30
@@ -227,17 +246,3 @@ siz kuchli bolgan narsalarni qiling
 //     console.log("data:", data);
 //   }
 // });
-
-// function countDigits("ad2a54y79wet0sfgb9") {
-//   const result = misra.split();
-//   const lastResult = result.filter((e) => e === alfabit);
-//   console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
-// }
-// countLetter("e", "enginee");
-
-function countDigits("ad2a54y79wet0sfgb9") {
-  const result = misra.split();
-  const lastResult = result.filter((e) => e === alfabit);
-  console.log(`${misra} ning ichida ${alfabit} dan ${lastResult.length}ta bor`);
-}
-const countDigits("ad2a54y79wet0sfgb9");
