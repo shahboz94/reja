@@ -15,6 +15,7 @@ function countDigits(text) {
   console.log(`${text} ning ichida raqamlar ${lastResult.length}ta bor`);
 }
 countDigits("ad2 a54f05y79w");
+
 // const { listen } = require("./app");
 
 // console.log("Jack Ma maslahatlari");
