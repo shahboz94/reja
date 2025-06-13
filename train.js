@@ -1,3 +1,47 @@
+/*       TASK c      */
+const moment = require("moment");
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.tovarlar = { non, lagmon, cola };
+  }
+
+  getTime() {
+    return moment().format("HH:mm");
+  }
+
+  qoldiq() {
+    const { non, lagmon, cola } = this.tovarlar;
+    console.log(
+      `Hozir ${this.getTime()}da ${non}ta non, ${lagmon}ta lag'mon, ${cola}ta cola bor.`
+    );
+  }
+
+  sotish(nomi, soni) {
+    const bor = this.tovarlar[nomi];
+    if (bor == undefined)
+      return console.log(`Hozirda ${nomi} degan mahsulot yo'q.`);
+    if (bor < soni)
+      return console.log(`Hozirda yetarli ${nomi} yo'q. Faqat ${bor}ta bor.`);
+    this.tovarlar[nomi] -= soni;
+    console.log(` ${soni}ta ${nomi} sotildi.`);
+  }
+
+  qabul(nomi, soni) {
+    if (this.tovarlar[nomi] == undefined)
+      return console.log(`Hozirda  ${nomi} degan mahsulot yo'q.`);
+    this.tovarlar[nomi] += soni;
+    console.log(`Yana ${soni}ta ${nomi} qabul qilindi.`);
+  }
+}
+const shop = new Shop(10, 5, 8);
+shop.qoldiq();
+shop.sotish("non", 8);
+shop.sotish("non", 4);
+
+// shop.qabul("cola", );
+shop.qoldiq();
+
 /*       TASK A      */
 // function countDigits("ad2a54y79wet0sfgb9") {
 //   const result = misra.split();
@@ -7,14 +51,14 @@
 // countLetter("e", "enginee");
 
 /*       TASK B      */
-function countDigits(text) {
-  const result = text.split("");
-  const lastResult = result.filter((ele) => {
-    return ele >= 0 && ele !== " ";
-  });
-  console.log(`${text} ning ichida raqamlar ${lastResult.length}ta bor`);
-}
-countDigits("ad2 a54f05y79w");
+// function countDigits(text) {
+//   const result = text.split("");
+//   const lastResult = result.filter((ele) => {
+//     return ele >= 0 && ele !== " ";
+//   });
+//   console.log(`${text} ning ichida raqamlar ${lastResult.length}ta bor`);
+// }
+// countDigits("ad2 a54f05y79w");
 
 // const { listen } = require("./app");
 
