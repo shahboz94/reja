@@ -1,47 +1,56 @@
-/*       TASK c      */
+//TASK-C
 const moment = require("moment");
-
 class Shop {
+  non;
+  lagmon;
+  cola;
   constructor(non, lagmon, cola) {
-    this.tovarlar = { non, lagmon, cola };
-  }
-
-  getTime() {
-    return moment().format("HH:mm");
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
   }
 
   qoldiq() {
-    const { non, lagmon, cola } = this.tovarlar;
     console.log(
-      `Hozir ${this.getTime()}da ${non}ta non, ${lagmon}ta lag'mon, ${cola}ta cola bor.`
+      `hozir ${moment().format("HH:mm")} da ${this.non}ta non, ${
+        this.lagmon
+      }ta lagmon, ${this.cola}ta cola mavjud.`
     );
   }
 
-  sotish(nomi, soni) {
-    const bor = this.tovarlar[nomi];
-    if (bor == undefined)
-      return console.log(`Hozirda ${nomi} degan mahsulot yo'q.`);
-    if (bor < soni)
-      return console.log(`Hozirda yetarli ${nomi} yo'q. Faqat ${bor}ta bor.`);
-    this.tovarlar[nomi] -= soni;
-    console.log(` ${soni}ta ${nomi} sotildi.`);
+  sotish(name, amount) {
+    if (name === "non") {
+      this.non -= amount;
+    } else if (name === "lagmon") {
+      this.lagmon -= amount;
+    } else if (name === "cola") {
+      this.cola -= amount;
+    } else {
+      console.log("bunday mahsulot mavjud emas");
+    }
   }
 
-  qabul(nomi, soni) {
-    if (this.tovarlar[nomi] == undefined)
-      return console.log(`Hozirda  ${nomi} degan mahsulot yo'q.`);
-    this.tovarlar[nomi] += soni;
-    console.log(`Yana ${soni}ta ${nomi} qabul qilindi.`);
+  qabul(name, amount) {
+    if (name === "non") {
+      this.non += amount;
+    } else if (name === "lagmon") {
+      this.lagmon += amount;
+    } else if (name === "cola") {
+      this.cola += amount;
+    } else {
+      console.log("bunday mahsulot mavjud emas");
+    }
   }
 }
-const shop = new Shop(10, 5, 8);
+const shop = new Shop(6, 8, 4);
 shop.qoldiq();
-shop.sotish("non", 8);
+console.log("mahsulotlarimizni  yangilan royhati");
 shop.sotish("non", 4);
+shop.sotish("lagmon", 4);
 
-// shop.qabul("cola", );
 shop.qoldiq();
 
+shop.qabul("lagmon", 5);
 /*       TASK A      */
 // function countDigits("ad2a54y79wet0sfgb9") {
 //   const result = misra.split();

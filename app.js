@@ -1,20 +1,22 @@
 const express = require("express");
-const { ObjectId } = require("mongodb"); // <<< BU YERDA KERAKLI QATOR
+//const mongodb = require("mongodb");
 const app = express();
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
-// Middleware
+// 1kirish
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// View sozlamalari
+//2 Session code
+//3 View Code
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-// Routing
+//4 Routing code
 app.post("/create-item", (req, res) => {
+  console.log("user entered/create-item");
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
     res.json(data.ops[0]);
@@ -24,7 +26,7 @@ app.post("/create-item", (req, res) => {
 app.post("/delete-item", (req, res) => {
   const id = req.body.id;
   db.collection("plans").deleteOne(
-    { _id: new ObjectId(id) }, // <<< ObjectId to'g'ri ishlatildi
+    { _id: new mongodb.ObjectId(id) },
     function (err, data) {
       res.json({ state: "success" });
     }
@@ -45,7 +47,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/author", (req, res) => {
-  res.render("author", { user: user }); // "user" o'zgaruvchisi ham e'lon qilinmagan bo'lishi mumkin!
+  res.render("author", { user: user });
 });
 
 module.exports = app;
