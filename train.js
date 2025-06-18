@@ -1,20 +1,29 @@
-//       TASK-D
-function checkContent(text1, text2) {
-  let result1 = text1.split("");
-  let result2 = text2.split("");
+//       TASK-E
 
-  result1.sort();
-  result2.sort();
-
-  return result1.join() == result2.join();
+function getReverse(text) {
+  let result = text.split("").reverse().join("");
+  console.log(result);
 }
 
-const result = checkContent("mitgroup", "gmtiprou");
+getReverse("hello");
 
-console.log(result);
+//       TASK-D
+// function checkContent(text1, text2) {
+//   let result1 = text1.split("");
+//   let result2 = text2.split("");
 
-console.log(checkContent("hello", "world"));
-console.log("====");
+//   result1.sort();
+//   result2.sort();
+
+//   return result1.join() == result2.join();
+// }
+
+// const result = checkContent("mitgroup", "gmtiprou");
+
+// console.log(result);
+
+// console.log(checkContent("hello", "world"));
+// console.log("====");
 
 //       TASK-C
 // const moment = require("moment");
