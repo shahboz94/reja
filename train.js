@@ -1,11 +1,26 @@
-//       TASK-E
-
-function getReverse(text) {
-  let result = text.split("").reverse().join("");
-  console.log(result);
+//       TASK-F
+function findDoublers(text) {
+  const result = text.split("");
+  for (let i = 0; i < result.length; i++) {
+    if (result.indexOf(result[i]) !== i) {
+      console.log(true);
+      return true;
+    }
+  }
+  console.log(false);
+  return false;
 }
 
-getReverse("hello");
+findDoublers("hello");
+
+//       TASK-E
+
+// function getReverse(text) {
+//   let result = text.split("").reverse().join("");
+//   console.log(result);
+// }
+
+// getReverse("hello");
 
 //       TASK-D
 // function checkContent(text1, text2) {
